@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginup.css">
+    <script src="https://kit.fontawesome.com/66076eb928.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div style="position: absolute;left: 40px;top: 40px;z-index: 99;"><a href="http://127.0.0.1:5500/index.html"
+            style="text-decoration: none;color: #000;">
+            <h1 style="font-size: 50px;">WIX</h1>
+        </a></div>
+    <div class="root">
+        <div class="manin-sign-in">
+            <div class="main">
+                <div style="margin: 40px 40px 0 40px;">
+                    <h1 style="font-size: 50px;">WIX</h1>
+                </div>
+                <div class="main2">
+                    <div style="margin-top: 0;">
+                        <h2 style="font-size: 50px;">Log In</h2>
+                    </div>
+                    <div style="font-size: 19px;">
+                        <span>Don't have an account?</span>
+                        <button class="logout"
+                            style="border: none;background: none;color: rgb(135, 145, 255);cursor: pointer;">Sign
+                            Up</button>
+                    </div>
+                    <div class="main2-3">
+                        <div>
+                            <form action="" method="post" style="display: flex;flex-direction: column;">
+                                <input class="main2-3-1-1-input" type="email" name="email" id="email">
+                                <span class="main2-3-1-1-span">Email</span>
+                                <a style="color: #000;" href="#">Forgot Email?</a>
+                            </form>
+                            <div class="main2-3-1-1">
+                                <span style="font-size: 18px;">Continue with Email</span>
+                                <i class="fa-solid fa-angle-right" style="margin-left: 17px;font-size: 10px;"></i>
+                            </div>
+                        </div>
+                        <div class="slit">
+                            <div style="height: 100px;"></div>
+                            <div class="container-d">or</div>
+                            <div style="height: 100px;"></div>
+                        </div>
+                        <div class="main2-3-3">
+                            <div style="border: 1px solid #1a73e8;"><i style="color: #1a73e8;cursor: pointer;"
+                                    class="fa-brands fa-google"></i>
+                                <div
+                                    style="display: flex;justify-content: center;background-color: #1a73e8;color: #fff;">
+                                    Continue with
+                                    Google</div>
+                            </div>
+                            <div style="border: 1px solid #3b5998;cursor: pointer;"><i style="color: #3b5998;"
+                                    class="fa-brands fa-facebook-f"></i>
+                                <div
+                                    style="display: flex;justify-content: center;background-color: #3b5998;color: #fff;">
+                                    Continue with
+                                    facebook</div>
+                            </div>
+                            <div style="border: 1px solid #000;cursor: pointer;"><i class="fa-brands fa-apple"></i>
+                                <div style="display: flex;justify-content: center;border-left: 1px solid #000;">Continue
+                                    with
+                                    Apple</div>
+                            </div>
+                            <div style="display: flex;justify-content: center;">
+                                <a href="#" style="text-decoration: none;color: rgb(79,121,255);">Continue with SSO</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="color: rgb(121,131,156); margin: 2px;font-size: 13px;">
+                        <a style="color: rgb(121,131,156); margin-left: 10px;" href="#">Terms of Use</a>
+                        <a style="color: rgb(121,131,156); margin-left: 10px;" href="#">Privacy Policy</a>
+                    </div>
+                    <div
+                        style="color: rgb(121,131,156); margin: 2px;font-size: 13px;max-width: 522px;text-align: center;">
+                        This
+                        site is protected by
+                        reCAPTCHA Enterprise.
+                        <a style="color: rgb(121,131,156);" href="#">Google's Privacy Policy</a> and <a
+                            style="color: rgb(121,131,156);" href="#">Terms of
+                            Service</a> apply.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="manin-sign-up">
+            <div class="main">
+                <div style="position: relative;">
+                    <h1 style="font-size: 50px;margin: 40px;">WIX</h1>
+                    <div class="main2" style="position: absolute;top:-40px;right: 0;left: 0;bottom: 0;">
+                        <div style="margin-top: 0;">
+                            <h2 style="font-size: 50px;">Sign Up</h2>
+                        </div>
+                        <div style="font-size: 19px;">
+                            <span>Already have an account?</span>
+                            <button class="logout"
+                                style="border: none;background: none;color: rgb(135, 145, 255);cursor: pointer;">Log
+                                In</button>
+                        </div>
+                        <div class="main2-3">
+                            <div>
+                                <form action="" method="post" style="display: flex;flex-direction: column;">
+                                    <div style="display: flex;margin: 0;">
+                                        <input class="main2-3-1-1-input" type="email" name="email_up" id="email_up">
+                                        <span class="main2-3-1-1-span">Email</span>
+                                    </div>
+
+                                    <div style="display: flex;margin: 0;">
+                                        <input class="main2-3-1-1-input" type="email" name="email_again"
+                                            id="email_again">
+                                        <span class="main2-3-1-1-span">Type your email again</span>
+                                    </div>
+
+                                    <div style="display: flex;margin: 0;"><input class="main2-3-1-1-input"
+                                            type="password" name="password" id="password">
+                                        <span class="main2-3-1-1-span">Choose a password</span>
+                                    </div>
+
+                                    <div style="display: flex;margin: 0;">
+                                        <input class="main2-3-1-1-input" type="password" name="password_agian"
+                                            id="password_agian">
+                                        <span class="main2-3-1-1-span">Confirm password</span>
+                                    </div>
+                                </form>
+                                <div class="main2-3-1-1" style="max-width: 116px !important;">
+                                    <span style="font-size: 18px;">Sign Up</span>
+                                </div>
+                            </div>
+                            <div class="slit">
+                                <div></div>
+                                <div class="container-d">or</div>
+                                <div></div>
+                            </div>
+                            <div class="main2-3-3" style="justify-content: center;">
+                                <div style="border: 1px solid #1a73e8;"><i style="color: #1a73e8;cursor: pointer;"
+                                        class="fa-brands fa-google"></i>
+                                    <div
+                                        style="display: flex;justify-content: center;background-color: #1a73e8;color: #fff;">
+                                        Continue with
+                                        Google</div>
+                                </div>
+                                <div style="border: 1px solid #3b5998;cursor: pointer;"><i style="color: #3b5998;"
+                                        class="fa-brands fa-facebook-f"></i>
+                                    <div
+                                        style="display: flex;justify-content: center;background-color: #3b5998;color: #fff;">
+                                        Continue with
+                                        facebook</div>
+                                </div>
+                                <div style="border: 1px solid #000;cursor: pointer;"><i class="fa-brands fa-apple"></i>
+                                    <div style="display: flex;justify-content: center;border-left: 1px solid #000;">
+                                        Continue
+                                        with
+                                        Apple</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="color: rgb(121,131,156); margin: 80px 0 2px 0;font-size: 13px;position: relative;">*
+                            By
+                            signing
+                            up, you agree to our
+                            <a style="color: rgb(121,131,156);" href="#">Terms of Use</a> and acknowledge you’ve read
+                            our
+                            <a style="color: rgb(121,131,156);" href="#">Privacy Policy</a>
+                        </div>
+                        <div style="color: rgb(121,131,156); margin: 2px;font-size: 13px;">
+                            This
+                            site is protected by
+                            reCAPTCHA Enterprise.
+                            <a style="color: rgb(121,131,156);" href="#">Google's Privacy Policy</a> and <a
+                                style="color: rgb(121,131,156);" href="#">Terms of
+                                Service</a> apply.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="inup.js"></script>
+</body>
+
+</html>

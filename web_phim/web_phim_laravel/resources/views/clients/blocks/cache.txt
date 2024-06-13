@@ -1,0 +1,14 @@
+ {{-- foreach ($top_view as $i) {
+                    echo '<div class="tp"><p class="pxm">' . $i['ten_phim'] . '</p></div>';
+                } --}}
+
+{{-- while ($i = $arr_showphim->fetch_array()) {
+                    echo '<div class="slide_phim" style="height: 380px;background-color:#5C5470;border-radius:20px;">
+            <div><div class="slde"><img class="lkphim" src="' . $i['link_anh_phim'] . '" alt=""></div></div>
+            <div style="width: 200px;color:#ffffff;margin:15px 0;">' . $i['ten_phim'] . '</div>
+            </div>';
+                } --}}
+
+ {{-- while ($i = $arr_showslide->fetch_array()) {
+                echo '<div class="container"><img src="' . $i['link_anh'] . '" alt="' . $i['ten_anh'] . '" class="anhq "></div>';
+            } --}}

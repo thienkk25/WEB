@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-srch {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    height: 89px;
+}
+
+.srch {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+.login-up {
+    grid-row: -2/-1;
+    grid-column: 3/4;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: flex-start;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nabar {
+    background-color: #fc8b23;
+    height: 35px;
+}
+
+.nabar ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 35px;
+    align-items: center;
+}
+
+.nabar ul li {
+    list-style: none;
+    margin-left: 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+/* .nabar ul li:nth-child(1):active .Gift-cards {
+    display: block;
+} */
+
+.nabar ul li i {
+    margin-left: 5px;
+}
+
+.Gift-cards1 {
+    position: absolute;
+    display: none;
+    background-color: red;
+    margin-top: 8px;
+}

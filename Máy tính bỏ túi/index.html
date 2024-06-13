@@ -1,0 +1,174 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính bỏ túi</title>
+    <style>
+        body {
+            background-color: #430A5D;
+        }
+
+        #main {
+            background-color: #DFF5FF;
+            font-size: 20px;
+            border: 1px solid #C0C0C0;
+            height: 380px;
+            width: 210px;
+            margin: auto;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        #result {
+            margin: 10px 0;
+            border: 1px solid #C0C0C0;
+            border-radius: 2px;
+            padding: 5px;
+            width: 95%;
+            text-align: end;
+            background-color: #67C6E3
+        }
+
+        button {
+            padding: 12px;
+            width: 40px;
+            border: 1px solid #C0C0C0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5356FF;
+            color: #DFF5FF;
+        }
+
+        #btns {
+            display: grid;
+            grid-template-columns: repeat(4, 40px);
+            grid-template-rows: repeat(4, 40px);
+            gap: 10px 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table></table>
+    <div id="main">
+        <h2>Máy tính bỏ túi</h2>
+        <div id="result">0</div>
+        <div id="btns">
+            <button onclick="nxoa()">AC</button>
+            <button onclick="nngoacmo()">(</button>
+            <button onclick="nngoacdong()">)</button>
+            <button onclick="nchia()">/</button>
+            <button onclick="n7()">7</button>
+            <button onclick="n8()">8</button>
+            <button onclick="n9()">9</button>
+            <button onclick="nnhan()">x</button>
+            <button onclick="n4()">4</button>
+            <button onclick="n5()">5</button>
+            <button onclick="n6()">6</button>
+            <button onclick="ntru()">-</button>
+            <button onclick="n1()">1</button>
+            <button onclick="n2()">2</button>
+            <button onclick="n3()">3</button>
+            <button onclick="ncong()">+</button>
+            <button onclick="n0()">0</button>
+            <button onclick="ncham()">.</button>
+            <button onclick="ndel()">&#8592;</button>
+            <button onclick="nbang()">=</button>
+        </div>
+    </div>
+    <script>
+        var strResult = "";
+        function n0() {
+            strResult += "0";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n1() {
+            strResult += "1";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n2() {
+            strResult += "2";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n3() {
+            strResult += "3";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n4() {
+            strResult += "4";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n5() {
+            strResult += "5";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n6() {
+            strResult += "6";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n7() {
+            strResult += "7";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n8() {
+            strResult += "8";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function n9() {
+            strResult += "9";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function nchia() {
+            strResult += "/";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function ncong() {
+            strResult += "+";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function nnhan() {
+            strResult += "*";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function ntru() {
+            strResult += "-";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function nbang() {
+            result = eval(strResult);
+            document.getElementById("result").innerHTML = result;
+            strResult = result.toString();
+        }
+        function nxoa() {
+            strResult = "";
+            document.getElementById("result").innerHTML = 0;
+        }
+        function nngoacmo() {
+            strResult += "(";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function nngoacdong() {
+            strResult += ")";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function ncham() {
+            strResult += ".";
+            document.getElementById("result").innerHTML = strResult;
+        }
+        function ndel() {
+            strResult = strResult.slice(0, -1);
+            if (strResult.length > 0) {
+                document.getElementById("result").innerHTML = strResult;
+            }
+            else {
+                document.getElementById("result").innerHTML = "0";
+            }
+        }
+    </script>
+</body>
+
+</html>

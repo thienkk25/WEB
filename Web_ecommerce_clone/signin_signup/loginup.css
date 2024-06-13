@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.root {
+    height: 580px;
+    position: relative;
+}
+
+.manin-sign-in {
+    position: absolute;
+    opacity: 1;
+    transition: opacity .4s ease-in-out;
+    z-index: 2;
+}
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+}
+
+.main2 div {
+    margin: 20px;
+}
+
+
+.main2-3 {
+    width: 100%;
+    display: flex;
+    margin: 0 !important;
+    padding: 0;
+    justify-content: center;
+}
+
+.main2-3-1-1-input {
+    background: none;
+    outline: none;
+    z-index: 1;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px 10px 1px 10px;
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid #e6eaef;
+    width: 320px;
+    transition: transform .3s ease;
+}
+
+.main2-3-1-1-span {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 17px;
+    transition: transform .3s ease;
+}
+
+.main2-3-1-1 {
+    margin-top: 40px !important;
+    height: 38px;
+    text-align: center;
+    max-width: 230px;
+    color: #116dff;
+    border: 1px solid #116dff;
+    border-radius: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0 !important;
+    cursor: pointer;
+}
+
+.main2-3-1-1:hover {
+    background-color: #0f62e6;
+    color: #fff;
+}
+
+.main2-3-3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    padding-top: 0;
+    margin-top: 0 !important;
+}
+
+.main2-3-3 div {
+    margin: 10px 0;
+    height: 47px;
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main2-3-3 div i {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slit {
+    display: block;
+    margin: 5px !important;
+    padding: 0;
+}
+
+.slit div:nth-child(1) {
+    margin: auto;
+    padding: 0;
+    background-color: #e6eaef;
+    height: 155px;
+    width: 1.3px;
+
+}
+
+.slit div:nth-child(2) {
+    margin: 0;
+    padding: 0;
+}
+
+.slit div:nth-child(3) {
+    margin: auto;
+    padding: 0;
+    background-color: #e6eaef;
+    height: 155px;
+    width: 1.3px;
+
+}
+
+.manin-sign-up {
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}

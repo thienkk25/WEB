@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom</title>
+    <style>
+        #zoomImage {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #zoomImage1 {
+            width: 300px;
+            height: 300px;
+        }
+
+        #zoomImage2 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: all 0.2s ease;
+            display: none;
+            z-index: 2;
+        }
+
+        #ShowZoom {
+            height: 600px;
+            width: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #ShowZoom1 {
+            position: absolute;
+            height: 600px;
+            width: 600px;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="display: flex;justify-content: space-around;">
+        <div id="zoomImage">
+            <img src="img/goods_66_458047.webp" alt="Zoomable Image" id="zoomImage1">
+            <div id="zoomImage2"></div>
+        </div>
+        <div id="ShowZoom">
+            <img src="img/goods_66_458047.webp" alt="Zoomable Image" id="ShowZoom1">
+        </div>
+    </div>
+    <script>
+        let zoomImage = document.querySelector("#zoomImage");
+        let zoomImage1 = document.querySelector('#zoomImage1');
+        let zoomImage2 = document.querySelector('#zoomImage2');
+        let ShowZoom = document.querySelector('#ShowZoom');
+        let ShowZoom1 = document.querySelector('#ShowZoom1');
+        setTimeout(() => {
+            zoomImage1.addEventListener('mousemove', (e) => {
+                zoomImage2.style.display = 'block';
+                zoomImage2.style.left = (e.offsetX / (zoomImage1.offsetWidth * 1.8 - zoomImage2.offsetWidth)) * 100 + '%';
+                zoomImage2.style.top = (e.offsetY / (zoomImage1.offsetHeight * 1.8 - zoomImage2.offsetHeight)) * 100 + '%';
+                zoomImage2.style.display = 'block';
+
+
+                ShowZoom1.style.transform = 'scale(3)';
+                ShowZoom1.style.transition = 'all 0.2s ease';
+                ShowZoom1.style.left = (1 - (e.offsetX / (zoomImage1.offsetWidth - zoomImage2.offsetWidth)) - e.offsetX / (zoomImage1.offsetWidth * 1.8 - zoomImage2.offsetWidth)) * 100 + '%';
+                ShowZoom1.style.top = (1 - (e.offsetY / (zoomImage1.offsetHeight - zoomImage2.offsetHeight)) - e.offsetY / (zoomImage1.offsetHeight * 1.8 - zoomImage2.offsetHeight)) * 100 + '%';
+            });
+
+            zoomImage.addEventListener('mouseover', () => {
+                zoomImage2.style.display = 'block';
+            });
+            zoomImage.addEventListener('mouseout', () => {
+                zoomImage2.style.display = 'none';
+            });
+
+        }, 100);
+    </script>
+</body>
+
+</html>

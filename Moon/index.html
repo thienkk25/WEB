@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon</title>
+    <style>
+        :root {
+            --moon: 400px;
+            --earth: 30px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #092635;
+            /* background-color: #ffffff; */
+        }
+
+        .moon {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .o {
+            height: var(--moon);
+            width: var(--moon);
+            background-color: aliceblue;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 20px #F2F1EB;
+        }
+
+        .earth1 {
+            height: var(--earth);
+            width: var(--earth);
+            background-color: aliceblue;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 5px #F2F1EB;
+            position: relative;
+            transition: all .1s linear;
+        }
+
+        .defective {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 0 #161A30;
+            transition: all .1s linear;
+        }
+
+        .o1 {
+            height: var(--moon);
+            width: var(--moon);
+            background-color: aliceblue;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 20px #F2F1EB;
+            animation-name: auto-o1;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .earth2 {
+            height: var(--earth);
+            width: var(--earth);
+            background-color: #392467;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 5px #F2F1EB;
+            position: relative;
+        }
+
+        @keyframes auto-o1 {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="moon">
+        <div class="o">
+            <div class="earth1">
+                <div class="defective"></div>
+            </div>
+        </div>
+        <div class="o1">
+            <div class="earth2"></div>
+            <div class="earth2" style="background-color: #4CB9E7;left: 50px;top:-30px"></div>
+            <div class="earth2" style="background-color: #E26EE5;left: -30px;"></div>
+            <div class="earth2" style="background-color: #FFF78A;left: -30px;bottom: -30px;"></div>
+        </div>
+    </div>
+    <script>
+        function startAnimation() {
+            let earth1 = document.querySelector('.earth1');
+            let defective = document.querySelector('.defective');
+
+            earth1.style.transform = ' translate(349px,349px)';
+            function auto_earth() {
+                for (let i = 0; i < 350; i++) {
+                    setTimeout(function () {
+                        earth1.style.display = 'block';
+                        earth1.style.transform = ' translate(' + i + 'px,' + i + 'px)';
+                        if (i === 349) {
+                            earth1.style.display = 'none';
+                        }
+                    }, 20 * i);
+                }
+            }
+
+            auto_earth();
+
+            function auto_defective() {
+                for (let i = 0; i < 40; i++) {
+                    setTimeout(function () {
+                        defective.style.boxShadow = ' inset ' + i + 'px ' + i / 2 + 'px 0 0 #161A30';
+                    }, 250 * i);
+                }
+            }
+            auto_defective();
+
+            setInterval(function () {
+                startAnimation();
+            }, 15000);
+        }
+        startAnimation();
+
+    </script>
+</body>
+
+</html>
